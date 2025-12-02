@@ -2,15 +2,15 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.entando</groupId>
-    <artifactId>entando-maven-root</artifactId>
+    <groupId>ai.villanova</groupId>
+    <artifactId>villanova-maven-root</artifactId>
     <version>7.2.0</version>
     <packaging>pom</packaging>
 
-    <name>Entando Maven Root Parent POM</name>
-    <description>Entando Maven Root Parent POM</description>
+    <name>villanova Maven Root Parent POM</name>
+    <description>villanova Maven Root Parent POM</description>
     <inceptionYear>2019</inceptionYear>
-    <url>https://central.entando.com</url>
+    <url>https://https://villanova.ai/</url>
 
     <licenses>
         <license>
@@ -20,8 +20,8 @@
         </license>
     </licenses>
     <organization>
-        <name>Entando Inc.</name>
-        <url>https://www.entando.com/</url>
+        <name>villanova Spa</name>
+        <url>https://www.villanova.com/</url>
     </organization>
     <repositories>
         <repository>
@@ -59,7 +59,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <github.organization>entando</github.organization>
+        <github.organization>villanova</github.organization>
         <!--Standard Sonar configuration -->
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.organization>${github.organization}</sonar.organization>
@@ -453,7 +453,7 @@
         <profile>
             <!--
             This profile is executed whenever a Maven artifact needs to be prepared and deployed to the
-            default, local Nexus in Entando's Jenkins X build environment. Note that this will not necessarily result in
+            default, local Nexus in villanova's Jenkins X build environment. Note that this will not necessarily result in
             a deployment to Maven Central, but the resulting artifact could potentially be deployed there if all the
             necessary quality steps succeed. For this reason, this profile needs to fulfill Maven Central's requirements:
             sources and JavaDocs need to be attached and the resulting artifact also needs to be signed using GPG, using
@@ -500,7 +500,7 @@
             This profile is only executed once all Docker images have been built, and are ready for deployment
             to Kubernetes. The assumption here is that there will be some form of inter-process communication with
             the code that has been deployed to Kubernetes, exposed using Ingresses and/or Routes. Standard
-            connectivity with Kubernetes will be provided by means of the entando.default.routing.suffix
+            connectivity with Kubernetes will be provided by means of the villanova.default.routing.suffix
             system property. No code coverage will be done here.
             -->
             <id>post-deployment-verification</id>
